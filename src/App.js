@@ -22,9 +22,14 @@ class App extends Component {
   }
 
   render() {
+
+    const styleButton = {
+      cursor: 'pointer'
+    }
+
     return (
       <div className="App">
-        <button onClick={() => this.switchHandler('newUserName')}>Switch Name</button>
+        <button onClick={() => this.switchHandler('newUserName')} style={styleButton}>Switch Name</button>
         <UserInput changed={this.inputChangedHandler.bind(this)} name={this.state.userName}/>
         <UserOutput userName={this.state.userName}/>
         <UserOutput userName={this.state.userName}/>
