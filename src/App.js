@@ -6,18 +6,18 @@ import './App.css';
 class App extends Component {
 
   state = {
-    userName: 'sampleName'
+    username: 'anotherName'
   };
 
-  switchHandler = (newUserName) => {
+  usernameChangedHandler = (newUserName) => {
     this.setState({
-      userName: newUserName
+      username: newUserName
     });
   }
 
   inputChangedHandler = (event) => {
     this.setState({
-      userName: event.target.value
+      username: event.target.value
     });
   }
 
@@ -29,10 +29,10 @@ class App extends Component {
 
     return (
       <div className="App">
-        <button onClick={() => this.switchHandler('newUserName')} style={styleButton}>Switch Name</button>
-        <UserInput changed={this.inputChangedHandler.bind(this)} name={this.state.userName}/>
-        <UserOutput userName={this.state.userName}/>
-        <UserOutput userName={this.state.userName}/>
+        <button onClick={() => this.usernameChangedHandler('someNewName')} style={styleButton}>Switch Name</button>
+        <UserInput changed={this.inputChangedHandler.bind(this)} name={this.state.username}/>
+        <UserOutput userName={this.state.username}/>
+        <UserOutput userName="Test"/>
       </div>
     );
   }

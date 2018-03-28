@@ -4,8 +4,8 @@ import './styles.css';
 const userOutput = (props) => {
     return (
         <div>
-            <p className="parag">{props.userName}</p>
-            <p></p>    
+            <p className="parag">Username: {props.userName}</p>
+            <p>REEEEEEEEEEEEEE</p>
         </div>
     )
 };
